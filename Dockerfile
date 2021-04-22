@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.0.3-runtime-ubuntu18.04
+FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu16.04
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -49,7 +49,7 @@ RUN CODE_SERVER_VERSION=3.9.3 && \
     dpkg -i ./code-server_${CODE_SERVER_VERSION}_${ARCH}.deb && rm ./code-server_${CODE_SERVER_VERSION}_${ARCH}.deb
     
 COPY ./entrypoint.sh /usr/bin/entrypoint.sh
-COPY run.sh /run.sh
+#COPY run.sh /run.sh
 
 EXPOSE 8080
 # This way, if someone sets $DOCKER_USER, docker-exec will still work as
