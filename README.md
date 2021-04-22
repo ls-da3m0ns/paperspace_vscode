@@ -1,2 +1,2 @@
-# paperspace_vscode
-docker container to run vscode in paperspace vms and solve cuda compatibility issues
+# gradient-code-server
+Dockerfile to create the image for a gradient notebook runing on code-server with CUDA 10
